@@ -5,21 +5,25 @@ genButton.onclick = function(){
     let gridNum = prompt("Enter the number of squares per side you'd like in your grid! (Max 100)");
     gridNum = parseInt(gridNum);
 
-    container.innerHTML = '';
+    if (!isNaN(gridNum) && gridNum > 0 && gridNum <= 100) {
+        container.innerHTML = '';
 
-    for (j = 0; j < gridNum; j++) {
-        const row = document.createElement('div');
-        for (i = 0; i < gridNum; i++) {
-            const square = document.createElement('div');
-            square.classList.add('square');
-            square.style.width = `calc(96.5vh / ${gridNum})`
-            square.style.height = `calc(96.5vh / ${gridNum})`
-            square.addEventListener('mouseover', function (e) {
-                e.target.style.background = 'blue';
-            });
-            row.appendChild(square);
+        for (j = 0; j < gridNum; j++) {
+            const row = document.createElement('div');
+            for (i = 0; i < gridNum; i++) {
+                const square = document.createElement('div');
+                square.classList.add('square');
+                square.style.width = `calc(96.5vh / ${gridNum})`
+                square.style.height = `calc(96.5vh / ${gridNum})`
+                square.addEventListener('mouseover', function (e) {
+                    e.target.style.background = 'blue';
+                });
+                row.appendChild(square);
+            }
+            container.appendChild(row);
         }
-        container.appendChild(row);
+    } else {
+        alert("Invalid input, please make sure to enter a valid number between 1 and 100");
     }
 }
 
