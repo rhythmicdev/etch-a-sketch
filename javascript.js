@@ -16,7 +16,7 @@ genButton.onclick = function(){
                 square.style.width = `calc(95vh / ${gridNum})`
                 square.style.height = `calc(95vh / ${gridNum})`
                 square.addEventListener('mouseover', function (e) {
-                    e.target.style.background = 'blue';
+                    e.target.style.background = '#393E46';
                 });
                 row.appendChild(square);
             }
@@ -35,7 +35,7 @@ for (j = 0; j < 16; j++) {
         square.style.width = `calc(95vh / 16)`
         square.style.height = `calc(95vh / 16)`
         square.addEventListener('mouseover', function (e) {
-            e.target.style.background = 'blue';
+            e.target.style.background = '#393E46';
         });
         row.appendChild(square);
     }
