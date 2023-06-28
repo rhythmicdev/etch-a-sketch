@@ -13,8 +13,8 @@ genButton.onclick = function(){
             for (i = 0; i < gridNum; i++) {
                 const square = document.createElement('div');
                 square.classList.add('square');
-                square.style.width = `calc(96.5vh / ${gridNum})`
-                square.style.height = `calc(96.5vh / ${gridNum})`
+                square.style.width = `calc(95vh / ${gridNum})`
+                square.style.height = `calc(95vh / ${gridNum})`
                 square.addEventListener('mouseover', function (e) {
                     e.target.style.background = 'blue';
                 });
@@ -32,8 +32,8 @@ for (j = 0; j < 16; j++) {
     for (i = 0; i < 16; i++) {
         const square = document.createElement('div');
         square.classList.add('square');
-        square.style.width = `calc(96.5vh / 16)`
-        square.style.height = `calc(96.5vh / 16)`
+        square.style.width = `calc(95vh / 16)`
+        square.style.height = `calc(95vh / 16)`
         square.addEventListener('mouseover', function (e) {
             e.target.style.background = 'blue';
         });
