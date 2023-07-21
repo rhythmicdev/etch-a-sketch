@@ -1,6 +1,8 @@
 const container = document.querySelector('#container');
 const genButton = document.querySelector('#genButton');
 
+function colorRandomizer()
+
 genButton.onclick = function(){
     let gridNum = prompt("Enter the number of squares per side you'd like in your grid! (Max 100)");
     gridNum = parseInt(gridNum);
