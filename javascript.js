@@ -1,7 +1,9 @@
 const container = document.querySelector('#container');
 const genButton = document.querySelector('#genButton');
 
-function colorRandomizer()
+function colorRandomizer() {
+    return Math.floor(Math.random()*16777215).toString(16);
+}   
 
 genButton.onclick = function(){
     let gridNum = prompt("Enter the number of squares per side you'd like in your grid! (Max 100)");
@@ -18,7 +20,7 @@ genButton.onclick = function(){
                 square.style.width = `calc(95vh / ${gridNum})`
                 square.style.height = `calc(95vh / ${gridNum})`
                 square.addEventListener('mouseover', function (e) {
-                    e.target.style.background = '#393E46';
+                    e.target.style.background = `#${colorRandomizer()}`;
                 });
                 row.appendChild(square);
             }
@@ -37,7 +39,7 @@ for (j = 0; j < 16; j++) {
         square.style.width = `calc(95vh / 16)`
         square.style.height = `calc(95vh / 16)`
         square.addEventListener('mouseover', function (e) {
-            e.target.style.background = '#393E46';
+            e.target.style.background = `#${colorRandomizer()}`;
         });
         row.appendChild(square);
     }
