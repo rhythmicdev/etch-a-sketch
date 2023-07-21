@@ -5,9 +5,22 @@ body {
     background: #00ADB5;
 }
 
-#container {
+#outerContainer {
     display: flex;
     flex-wrap: wrap;
+}
+
+#buttonContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+#colorToggle, #staticToggle {
+    flex: 1;
+}
+
+#container {
+    display: flex;
     width: 95vh;
     margin: 0 auto;
     background: #EEEEEE;
